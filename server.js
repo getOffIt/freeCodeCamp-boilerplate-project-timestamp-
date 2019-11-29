@@ -24,9 +24,15 @@ app.get("/api/hello", function (req, res) {
   res.json({greeting: 'hello API'});
 });
 
+app.get("/api/timestamp", function (req, res) {
+  res.json({greeting: 'hello API'});
+});
 
+app.use(function (req, res, next) {
+  res.status(404).send("404 - Sorry can't find that!")
+})
 
 // listen for requests :)
-var listener = app.listen(process.env.PORT, function () {
+var listener = app.listen(3001, function () {
   console.log('Your app is listening on port ' + listener.address().port);
 });
