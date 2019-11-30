@@ -1,2 +1,5 @@
 [core]
 	excludesfile = /etc/.gitignore-global
+[user]
+	name = Ned
+	email = none@gmail.com
